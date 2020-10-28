@@ -6,8 +6,8 @@ import { MailOutlined, GoogleOutlined } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
 
 const Login = ({ history }) => {
-  const [email, setEmail] = useState("gqlreactnode@gmail.com");
-  const [password, setPassword] = useState("123456");
+  const [email, setEmail] = useState("dvds1987@gmail.com");
+  const [password, setPassword] = useState("Dawdaniel1987");
   const [loading, setLoading] = useState(false);
 
   let dispatch = useDispatch();
