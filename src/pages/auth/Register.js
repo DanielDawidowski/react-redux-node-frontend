@@ -5,12 +5,11 @@ import { toast } from "react-toastify";
 const Register = () => {
   const [email, setEmail] = useState("");
 
-  // console.log("ENV --->", process.env.REACT_APP_REGISTER_REDIRECT_URL);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // console.log("ENV --->", process.env.REACT_APP_REGISTER_REDIRECT_URL);
     const config = {
       url: process.env.REACT_APP_REGISTER_REDIRECT_URL,
-      // url: "http://localhost:3000/register/complete",
       handleCodeInApp: true,
     };
 
@@ -31,9 +30,11 @@ const Register = () => {
         className="form-control"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        placeholder="Your email"
         autoFocus
       />
 
+      <br />
       <button type="submit" className="btn btn-raised">
         Register
       </button>
