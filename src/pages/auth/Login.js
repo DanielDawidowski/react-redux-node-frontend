@@ -9,14 +9,14 @@ import { createOrUpdateUser } from "../../functions/auth";
 
 const Login = ({ history }) => {
   const [email, setEmail] = useState("dvds1987@gmail.com");
-  const [password, setPassword] = useState("Dawdaniel1987");
+  const [password, setPassword] = useState("Dawdaniel");
   const [loading, setLoading] = useState(false);
 
   const { user } = useSelector((state) => ({ ...state }));
 
   useEffect(() => {
     if (user && user.token) history.push("/");
-  }, [user]);
+  }, [user, history]);
 
   let dispatch = useDispatch();
 
@@ -82,8 +82,8 @@ const Login = ({ history }) => {
             });
             roleBasedRedirect(res);
           })
-          .catch();
-        history.push("/");
+          .catch((err) => console.log(err));
+        // history.push("/");
       })
       .catch((err) => {
         console.log(err);
