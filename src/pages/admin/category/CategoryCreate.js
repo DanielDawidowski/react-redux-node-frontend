@@ -67,12 +67,6 @@ const CategoryCreate = () => {
     }
   };
 
-  // step 3
-  const handleSearchChange = (e) => {
-    e.preventDefault();
-    setKeyword(e.target.value.toLowerCase());
-  };
-
   // step 4
   const searched = (keyword) => (c) => c.name.toLowerCase().includes(keyword);
 
